@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Video Downloader"
+  short_description: "Download public WeChat Channels videos"
+  default_prompt: "Use $wechat-video-downloader to download this public WeChat Channels share link."
