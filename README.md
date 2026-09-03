@@ -11,7 +11,9 @@
 
 ## 使用
 
-将此目录放入 Codex 的 skills 目录后，可使用 `$wechat-video-downloader` 调用。也可以直接运行脚本：
+### Codex
+
+将仓库根目录放入 Codex 的 skills 目录后，可使用 `$wechat-video-downloader` 调用。也可以直接运行脚本：
 
 ```bash
 python3 scripts/download_wechat_video.py \
@@ -20,6 +22,24 @@ python3 scripts/download_wechat_video.py \
 ```
 
 运行环境需要 Python 3.10+ 和系统 `curl`。
+
+### WorkBuddy
+
+WorkBuddy 上传包要求压缩包根目录直接包含 `SKILL.md`。请下载本仓库 ZIP，只把其中的 `workbuddy/` 目录内容重新压缩成一个包（不要把外层 `workbuddy` 目录再套一层），然后在 WorkBuddy 左侧「专家·技能·连接器」→「技能」→「上传技能」上传。
+
+命令行操作示例：
+
+```bash
+unzip wechat-video-downloader-skill-main.zip
+cd wechat-video-downloader-skill-main/workbuddy
+zip -r ../wechat-video-downloader-workbuddy.zip .
+```
+
+### TraeWork
+
+TraeWork 同样使用 `workbuddy/` 目录里的兼容包：在「插件市场」→「技能」→右上角「上传技能」上传 `wechat-video-downloader-workbuddy.zip`。也可以把该目录放进项目的 `.trae/skills/wechat-video-downloader/`；macOS/Linux 全局目录是 `~/.trae-cn/skills/`。
+
+安装后可在对话框输入 `/` 选择技能，或直接说“用微信视频号下载器下载这个公开链接”。
 
 ## 工作方式
 
